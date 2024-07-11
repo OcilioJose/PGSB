@@ -7,7 +7,7 @@ classDiagram
     class Usuario {
         string nome
         +Conta conta
-        +Caracteristica[] caracteristicas
+        +Servicos[] servico
         +Cartao cartao
         +Noticia[] noticia
     }
@@ -19,7 +19,7 @@ classDiagram
         string limite
     }
 
-    class Caracteristica {
+    class Servico {
         string icon
         string descricao
     }
@@ -35,7 +35,7 @@ classDiagram
     }
 
     Usuario "1" --> "1" Conta
-    Usuario "1" --> "0..*" Caracteristica
+    Usuario "1" --> "0..*" Servico
     Usuario "1" --> "1" Cartao
     Usuario "1" --> "0..*" Noticia
 ```
